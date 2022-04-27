@@ -1,6 +1,6 @@
 package ru.netology.web.page;
 
-import org.junit.jupitgiter.api.Assertions;
+import org.junit.jupiter.api.Assertions;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.web.data.DataHelper;
