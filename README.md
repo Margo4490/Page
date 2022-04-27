@@ -1,1 +1,2 @@
-The build phase is set to "MSBuild" mode (default), but no Visual Studio project or solution files were found in the root directory. If you are not building Visual Studio project switch build mode to "Script" and provide your custom build command.
+[![Build status](https://ci.appveyor.com/api/projects/status/4pvhlqs0at5tk40r?svg=true)](https://ci.appveyor.com/project/Margo4490/page)
+
