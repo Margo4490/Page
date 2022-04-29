@@ -17,7 +17,7 @@ public class DashboardPage {
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = " р.";
     private final SelenideElement buttonSelector = $("button");
-    private static final ElementsCollection cardsSelector = $$(".list__item div");
+    private static final ElementsCollection cardsSelector = $$(".list__item ");
     private final SelenideElement updateSelector = $("[data-test-id='action-reload']");
     private static final SelenideElement heading = $("[data-test-id='dashboard']");
 
@@ -40,11 +40,12 @@ public class DashboardPage {
     }
 
 
-    private int extractBalance(String text) {
+        private int extractBalance(String text) {
         var start = text.indexOf(balanceStart);
         var finish = text.indexOf(balanceFinish);
         var value = text.substring(start + balanceStart.length(), finish);
         return Integer.parseInt(value);
     }
+
 }
 

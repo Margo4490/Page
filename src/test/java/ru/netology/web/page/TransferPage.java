@@ -15,16 +15,17 @@ public class TransferPage {
     private SelenideElement fromInput = $("[data-test-id='from'] input");
     private SelenideElement transferHead = $(byText("Пополнение карты"));
 
-    public TransferPage(){
+    public TransferPage() {
         transferHead.shouldBe(visible);
     }
 
-    public DashboardPage makeTransfer(String amountToTransfer, DataHelper.CardInfo cardInfo){
+    public DashboardPage makeTransfer(String amountToTransfer, DataHelper.CardInfo cardInfo) {
         amountInput.setValue(amountToTransfer);
         fromInput.setValue(cardInfo.getCardNumber());
         transferButton.click();
         return new DashboardPage();
     }
+
     public DashboardPage makeTransfer2(String amountToTransfer, DataHelper.CardInfo cardInfo) {
         amountInput.sendKeys(chord(SHIFT, HOME, BACK_SPACE));
         amountInput.setValue(amountToTransfer).sendKeys(TAB);
@@ -34,4 +35,3 @@ public class TransferPage {
         return new DashboardPage();
     }
 }
-
