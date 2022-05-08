@@ -74,7 +74,7 @@ public class MoneyTransferTest {
         var dashboardPage = verificationPage.validVerify(verifyInfo);
         var firstCardInfo = DataHelper.getFirstCardInfo();
         var secondCardInfo = DataHelper.getSecondCardInfo();
-        int amount = 20000;
+        int amount = 10000;
         var expectedBalanceFirstCard = dashboardPage.getCardBalance(firstCardInfo) - amount;
         var expectedBalanceSecondCard = dashboardPage.getCardBalance(secondCardInfo) + amount;
         var transferPage = dashboardPage.selectCardToTransfer(secondCardInfo);
